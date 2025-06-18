@@ -56,7 +56,7 @@ function App() {
             <div className=" lg:col-span-1 bg-white">
               <BudgetTracker />
             </div>
-            <Card className="lg:col-span-2 h-[518px] gap-3">
+            <Card className="lg:col-span-2 h-fit md:h-[518px] gap-3">
               <Expenses />
             </Card>
           </div>

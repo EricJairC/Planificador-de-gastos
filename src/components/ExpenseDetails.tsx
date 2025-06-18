@@ -22,9 +22,8 @@ export default function ExpenseDetails({ expense }: ExpenseDetailsProps) {
                 <div className="text-2xl">{categoryInfo.icon}</div>
                 <div className="flex-1 min-w-0">
                     <h3 className="font-medium text-slate-900 truncate">{expense.expenseName}</h3>
-                    <div className="flex items-center gap-2 mt-1">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-0 sm:gap-2 mt-1">
                         <div className={`${categoryInfo.color} text-sm rounded-xl py-1 px-3 font-semibold`}>{categoryInfo.name}</div>
-
                         <span className="text-sm text-slate-500">{formatDate(expense.date!.toString())}</span>
                     </div>
                 </div>
@@ -33,7 +32,7 @@ export default function ExpenseDetails({ expense }: ExpenseDetailsProps) {
                 <div className="text-right">
                     <p className="font-semibold text-slate-900">${expense.amount.toLocaleString()}</p>
                 </div>
-                <div>
+                <div className=" flex flex-col sm:flex-row items-end">
                     <Button
                         variant="ghost"
                         size="sm"

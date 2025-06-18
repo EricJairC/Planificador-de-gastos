@@ -7,8 +7,8 @@ export default function Expenses() {
     return (
         <>
             <CardHeader>
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                    <CardTitle className="flex items-center gap-5 text-lg font-semibold">
+                <div className="flex flex-col gap-5 md:gap-0 md:flex-row justify-between items-start sm:items-center">
+                    <CardTitle className="flex w-full md:w-fit items-center gap-5 text-lg font-semibold">
                         <Filter className="w-7 h-7" />
                         Gastos Recientes
                     </CardTitle>
