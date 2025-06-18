@@ -2,6 +2,7 @@ import { useBudget } from '@/hooks/useBudget'
 import type { Expense } from '@/type'
 import ExpenseTimelineDetails from './ExpenseTimelineDetails'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
+import { formatCurrency, formatDateToLongES } from '@/utils'
 
 export default function ExpenseTimeline() {
 
@@ -38,14 +39,9 @@ export default function ExpenseTimeline() {
                                         <div className="flex-shrink-0 w-3 h-3 bg-blue-500 rounded-full"></div>
                                         <div className="flex-1">
                                             <h3 className="font-semibold text-slate-900">
-                                                {new Date(date).toLocaleDateString("es-ES", {
-                                                    weekday: "long",
-                                                    year: "numeric",
-                                                    month: "long",
-                                                    day: "numeric",
-                                                })}
+                                                {formatDateToLongES(date)}
                                             </h3>
-                                            <p className="text-sm text-slate-600">Total del día: ${dayTotal.toLocaleString()}</p>
+                                            <p className="text-sm text-slate-600">Total del día: {formatCurrency(dayTotal)}</p>
                                         </div>
                                     </div>
                                     <div className="ml-6 space-y-2 pb-4">
