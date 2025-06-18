@@ -31,7 +31,7 @@ export default function ExpensesByCategory() {
                         dataKey="value"
                     >
                         {categoryData.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} data-name={entry.name}/>
                         ))}
                     </Pie>
                     <Tooltip contentStyle={{ backgroundColor: '#FDFDFD', color: '#fff', borderRadius: 8, padding: '0.3rem', border: 'solid 1px #DCDFE2' }} formatter={(value) => [`$${Number(value).toLocaleString()}`, "Gasto"]} />
